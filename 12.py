@@ -11,10 +11,15 @@
 
 
 # def extract_digits(num):
-#   s_num = str(num)
-#   print(f"сотни - {s_num[0]}, десятки - {s_num[1]}, единицы - {s_num[2]}")
-
-# extract_digits(int(input("введите трехзначное число: ")))
+#     if 100 <= num <= 999:
+#         hundreds = num // 100
+#         tens = (num % 100) // 10 
+#         units = num % 10  
+#         print(f"сотни - {hundreds}, десятки - {tens}, единицы - {units}")
+#     else:
+#         print("Число должно быть трехзначным!")
+# num = int(input("введите трехзначное число: "))
+# extract_digits(num)
 
 
 
@@ -28,11 +33,16 @@
 
 
 
-# def equalize_string_lengths(strings):
+# def pad_strings(strings):
+#     if not strings:
+#         return []
 #     max_len = max(len(s) for s in strings)
-#     print([s + "_" * (max_len - len(s)) for s in strings])
+#     padded_strings = [s + "_" * (max_len - len(s)) for s in strings]
+#     return padded_strings
 
-# equalize_string_lengths(["abc", "defgh", "ijkl"])
+# my_strings = ["a", "bb", "ccc", "dddd"]
+# padded_list = pad_strings(my_strings)
+# print(padded_list)
 
 
 
@@ -99,36 +109,19 @@
 # print(total_score)
 
 
+# def lists(list1, list2):
+#     result = []
+#     for i in range(max(len(list1), len(list2))):
+#         if i < len(list1):
+#             result.append(list1[i])
+#         if i < len(list2):
+#             result.append(list2[i])
+#     return result
 
-# def merge_lists(list1, list2):
-#     new_list = []
-#     len1 = len(list1)
-#     len2 = len(list2)
-
-#     i = 0
-#     while i < len1 and i < len2:
-#         new_list.append(list1[i])
-#         new_list.append(list2[i])
-#         i = i + 1 
-
-#     if len1 > len2:
-#         j = i 
-#         while j < len1:
-#             new_list.append(list1[j])
-#             j = j + 1
-
-#     elif len2 > len1:
-#         j = i 
-#         while j < len2:
-#             new_list.append(list2[j])
-#             j = j + 1
-
-#     return new_list
-# list1 = [1, 2, 3]
-# list2 = [11, 22, 33]
-# merged = merge_lists(list1, list2)
-# print(merged)
-
+# list_a = [1, 2, 3]
+# list_b = [11, 22, 33]
+# interleaved_list = lists(list_a, list_b)
+# print(interleaved_list)  
 
 
 # def remove_by_indexes(my_list, index1, index2):
@@ -154,7 +147,7 @@
 
 
 
-# def count_trailing_zeros(number):
+# def count_zeros(number):
 
 #     number_str = str(number)
 
@@ -166,7 +159,7 @@
 #         i = i - 1
 #     return count
 # number = int(input("Введите число: "))
-# zeros = count_trailing_zeros(number)
+# zeros = count_zeros(number)
 # print("Количество нулей в конце:", zeros)
 
 
