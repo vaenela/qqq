@@ -210,7 +210,6 @@ def extract_string_between_symbols(text, symbol1, symbol2):
     else:
         print("Один или оба символа не найдены в строке.")
 
-# Пример использования:
 text = input("Введите строку: ")
 symbol1 = input("Введите символ начала: ")
 symbol2 = input("Введите символ конца: ")
